@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { NotFoundComponent } from './not-found.component';
+import { DefaultComponent } from './default.component';
+import { CountryComponent } from './country.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/general',
+    redirectTo: '/default',
     pathMatch: 'full'
   },
   {
-    path: 'general',
-    component: GeneralComponent
+    path: 'default',
+    component: DefaultComponent
   },
   {
     path: 'country',
@@ -18,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: NotFoundComponent
+    component: NotFoundComponent 
   }
 ];
 
