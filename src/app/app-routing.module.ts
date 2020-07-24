@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-/* import { NotFoundComponent } from './not-found.component';
-import { DefaultComponent } from './default.component';
-import { CountryComponent } from './country.component'; */
+import { NotFoundComponent } from './components/not-found/not-found.component';
+//import { DefaultComponent } from './default.component';
+//import { CountryComponent } from './country.component';
 
 const routes: Routes = [
-/*   {
+/*  {
     path: '',
     redirectTo: '/default',
     pathMatch: 'full'

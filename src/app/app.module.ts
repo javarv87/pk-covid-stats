@@ -3,6 +3,7 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HeaderComponent } from '@pk-components/header/header.component';
 import { ToggleSwtichComponent } from '@pk-components/toggle-swtich/toggle-swtich.component';
@@ -18,6 +19,7 @@ export function themeFactory(themeService: ThemeService) {
     AppComponent,
     NotFoundComponent,
     HeaderComponent,
+    FooterComponent,
     ToggleSwtichComponent
   ],
   imports: [
