@@ -18,6 +18,9 @@
     "paths": {
       "@pk-components/*": [
         "src/app/components/*"
+      ],
+      "@pk-services/*": [
+        "src/app/services/*"
       ]
     }
   },
