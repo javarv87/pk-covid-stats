@@ -1,2 +1,5 @@
 <p>header works!</p>
-<pk-toggle-swtich></pk-toggle-swtich>
+<pk-toggle-swtich
+  [isChecked]="isDarkThemeActive"
+  (toggleTheme)="onToggleTheme($event)">
+</pk-toggle-swtich>

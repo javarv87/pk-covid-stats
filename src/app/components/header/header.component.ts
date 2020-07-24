@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '@pk-services/theme/theme.service';
 
 @Component({
   selector: 'pk-header',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
+  isDarkThemeActive;
 
-  constructor() { }
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
+    this.themeService.getActiveTheme().subscribe(data => {
+      this.isDarkThemeActive = data;
+    });
   }
 
+  onToggleTheme(e: boolean) {
+    this.themeService.switchTheme(e);
+  }
 }
