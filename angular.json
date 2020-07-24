@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.sass",
+              "node_modules/bootstrap/dist/css/bootstrap-grid.css"
             ],
             "scripts": []
           },
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pk-covid-stats"
+    }
+  },
+  "defaultProject": "pk-covid-stats",
+  "cli": {
+    "analytics": "b9f4f6df-e300-4619-9d29-82c7ff768a46"
+  }
 }
