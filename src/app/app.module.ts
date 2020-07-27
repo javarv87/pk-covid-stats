@@ -20,8 +20,7 @@ export function themeFactory(themeService: ThemeService) {
     NotFoundComponent,
     HeaderComponent,
     ToggleSwtichComponent,
-    FooterComponent,
-    NotFoundComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

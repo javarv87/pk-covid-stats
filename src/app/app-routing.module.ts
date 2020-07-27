@@ -5,7 +5,7 @@ import { DefaultComponent } from './default.component';
 import { CountryComponent } from './country.component'; */
 
 const routes: Routes = [
-/*   {
+/*  {
     path: '',
     redirectTo: '/default',
     pathMatch: 'full'

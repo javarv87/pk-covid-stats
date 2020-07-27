@@ -7,6 +7,7 @@ import { ThemeService } from '@pk-services/theme/theme.service';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
+ 
   isDarkThemeActive;
 
   constructor(private themeService: ThemeService) { }
