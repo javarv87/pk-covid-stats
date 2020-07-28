@@ -3,6 +3,10 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+
+import { DefaultPageComponent } from './components/default-page/default-page.component';
+
 import { FooterComponent } from '@pk-components/footer/footer.component';
 import { NotFoundComponent } from '@pk-components/not-found/not-found.component';
 import { HeaderComponent } from '@pk-components/header/header.component';
@@ -14,9 +18,12 @@ export function themeFactory(themeService: ThemeService) {
   return () => themeService.setInitialTheme();
 }
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
+    DefaultPageComponent,
     NotFoundComponent,
     HeaderComponent,
     ToggleSwtichComponent,

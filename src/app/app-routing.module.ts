@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-/* import { NotFoundComponent } from './not-found.component';
-import { DefaultComponent } from './default.component';
-import { CountryComponent } from './country.component'; */
+import { DefaultPageComponent } from './components/default-page/default-page.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+
 
 const routes: Routes = [
 /*  {
@@ -12,16 +12,13 @@ const routes: Routes = [
   },
   {
     path: 'default',
-    component: DefaultComponent
-  },
-  {
-    path: 'country',
-    component: CountryComponent
+    component: DefaultPageComponent
   },
   {
     path: '**',
     component: NotFoundComponent
   } */
+
 ];
 
 @NgModule({
