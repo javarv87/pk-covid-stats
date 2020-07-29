@@ -13,6 +13,7 @@ import { HeaderComponent } from '@pk-components/header/header.component';
 import { ToggleSwtichComponent } from '@pk-components/toggle-swtich/toggle-swtich.component';
 
 import { ThemeService } from '@pk-services/theme/theme.service';
+import { CardComponent } from '@pk-components/card/card.component';
 
 export function themeFactory(themeService: ThemeService) {
   return () => themeService.setInitialTheme();
@@ -27,7 +28,8 @@ export function themeFactory(themeService: ThemeService) {
     NotFoundComponent,
     HeaderComponent,
     ToggleSwtichComponent,
-    FooterComponent
+    FooterComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
