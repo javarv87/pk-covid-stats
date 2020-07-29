@@ -1,16 +1,9 @@
 @import 'styles/_variables'
-.card-dark
+.card
    width: 100%
    border-radius: 15px
-   background: linear-gradient($bg-dark-gradient)
-   box-shadow:  5px 5px 6px $shadow-dark, -5px -5px 6px $shadow-dark-light
-   min-height: 124px
-   max-height: 400px
-.card-light
-   width: 100%
-   border-radius: 15px
-   background: linear-gradient($bg-light-gradient)
-   box-shadow:  5px 5px 6px $shadow-light-dark, -5px -5px 6px $shadow-light
+   background: linear-gradient(var(--bg-gradient))
+   box-shadow:  5px 5px 6px var(--shadow-main), -5px -5px 6px var(--shadow-secondary)
    min-height: 124px
    max-height: 400px
 .card-title
