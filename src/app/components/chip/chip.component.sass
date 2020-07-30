@@ -1,0 +1,32 @@
+@import 'variables'
+
+.chip
+  max-width: 77px
+  max-height: 21px
+  border-radius: 10px
+  padding: 0px 12px
+  text-align: center
+  display: flex
+  align-items: center
+
+  &.success
+    background-color: $color-green
+
+  &.info
+    background-color: $color-blue
+
+  &.warning
+    background-color: $color-yellow
+
+  &.error
+    background-color: $color-red
+
+  .chart-icon
+    opacity: 0.75
+
+  .percentage
+    font-family: 'Raleway'
+    font-size: 12px
+    margin: 0px
+    color: white
+    
