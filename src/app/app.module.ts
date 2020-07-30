@@ -9,10 +9,13 @@ import { DefaultPageComponent } from '@pk-components/default-page/default-page.c
 import { CountryPageComponent } from '@pk-components/country-page/country-page.component';
 import { NotFoundPageComponent } from '@pk-components/not-found-page/not-found-page.component';
 
-// Components
+// Common Components
 import { FooterComponent } from '@pk-components/footer/footer.component';
 import { HeaderComponent } from '@pk-components/header/header.component';
+
+// Components
 import { ToggleSwtichComponent } from '@pk-components/toggle-swtich/toggle-swtich.component';
+import { CardComponent } from '@pk-components/card/card.component';
 
 import { ThemeService } from '@pk-services/theme/theme.service';
 
@@ -28,7 +31,8 @@ export function themeFactory(themeService: ThemeService) {
     NotFoundPageComponent,
     HeaderComponent,
     FooterComponent,
-    ToggleSwtichComponent
+    ToggleSwtichComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
