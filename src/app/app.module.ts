@@ -16,6 +16,7 @@ import { HeaderComponent } from '@pk-components/header/header.component';
 // Components
 import { ToggleSwtichComponent } from '@pk-components/toggle-swtich/toggle-swtich.component';
 import { CardComponent } from '@pk-components/card/card.component';
+import { ChipComponent } from './components/chip/chip.component';
 
 import { ThemeService } from '@pk-services/theme/theme.service';
 
@@ -32,7 +33,8 @@ export function themeFactory(themeService: ThemeService) {
     HeaderComponent,
     FooterComponent,
     ToggleSwtichComponent,
-    CardComponent
+    CardComponent,
+    ChipComponent
   ],
   imports: [
     BrowserModule,
