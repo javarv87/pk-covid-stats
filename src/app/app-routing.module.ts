@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultPageComponent } from '@pk-components/default-page/default-page.component';
-import { NotFoundComponent } from '@pk-components/not-found/not-found.component';
+import { NotFoundPageComponent } from '@pk-components/not-found-page/not-found-page.component';
 
 const routes: Routes = [
  {
@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: NotFoundComponent
+    component: NotFoundPageComponent
   }
 
 ];
