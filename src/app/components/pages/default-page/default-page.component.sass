@@ -1,6 +1,45 @@
 @import 'variables'
 @import 'theme'
 
+.main-section
+  .row
+    min-height: calc(100vh - 55px)
+    margin-left: 10rem
+    margin-right: 10rem
+    .left
+      .main-content
+        .main-title
+          h1
+            margin: 0 0 2rem 0
+            font-size: 7rem
+          h2
+            font-size: 1.5rem
+            margin: 0
+        .main-description
+          font-family: $font-raleway
+          font-size: 1.3rem
+    .right
+      .container-image
+        margin: 0 auto
+        padding: 4rem
+        max-width: 30em
+        position: relative
+        img
+          margin: 0 auto
+          width: 100%
+        .bg-image
+          position: absolute
+          background: var(--bg-color)
+          transition: background 0.7s, box-shadow 0.5s
+          box-shadow:  15px 10px 25px var(--dark-shadow), -15px -10px 25px var(--bright-shadow)
+          border-radius: 50%
+          left: 0
+          right: 0
+          width: 100%
+          top: 0
+          bottom: 0
+          z-index: -1
+
 .main
   padding: 20px
 
