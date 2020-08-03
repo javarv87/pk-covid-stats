@@ -2,8 +2,8 @@
 
 .main-section
   min-height: calc(100vh - 55px)
-  margin: 0 $content-aligment
   .left
+    margin-bottom: 1em
     .main-content
       .main-title
         .title
@@ -16,6 +16,8 @@
         font-family: $font-raleway
         font-size: 1.3em
   .right
+    padding: 1em
+    margin-bottom: 1em
     .main-container-image
       margin: 0 auto
       padding: 4em
@@ -38,26 +40,8 @@
         z-index: -1
 
 .stats-dashboard
-  margin: 0 $content-aligment
   .stats-title
     font-size: 5em
-
-//JUST VISUAL HELP MEANWHILE THERE IS NO COMPONENTS
-.stats
-  padding: 10px
-
-.stats-content
-  height: 200px
-  background-color: blue
-
-.info
-  padding: 10px
-  height: 400px
-
-.info-content
-  height: 400px
-  background-color: blue
-
 
 //PKS02US07
 .search-input
@@ -141,11 +125,11 @@
   box-shadow: 2px 2px 2px var(--top-shadow), -2px -2px 2px var(--bottom-shadow)
   margin: 4px
 
-.dropdown-content button:focus 
+.dropdown-content button:focus
   box-shadow: inset 3px 3px 4px var(--top-shadow), inset -3px -3px 4px var(--bottom-shadow)
-  
+
 .dropdown-button:hover
   box-shadow: inset 3px 3px 4px var(--top-shadow), inset -3px -3px 4px var(--bottom-shadow)
 
-.dropdown:hover  .dropdown-content  
+.dropdown:hover  .dropdown-content
   display: block
