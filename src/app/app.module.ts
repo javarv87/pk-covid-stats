@@ -9,11 +9,12 @@ import { DefaultPageComponent } from '@pk-components/pages/default-page/default-
 import { CountryPageComponent } from '@pk-components/pages/country-page/country-page.component';
 import { NotFoundPageComponent } from '@pk-components/pages/not-found-page/not-found-page.component';
 
-// Common Components
-import { FooterComponent } from '@pk-components/core/footer/footer.component';
+// Core Components
 import { HeaderComponent } from '@pk-components/core/header/header.component';
+import { GlobalStatsCardsComponent } from '@pk-components/core/global-stats-cards/global-stats-cards.component';
+import { FooterComponent } from '@pk-components/core/footer/footer.component';
 
-// Components
+// Common Components
 import { ToggleSwtichComponent } from '@pk-components/common/toggle-swtich/toggle-swtich.component';
 import { CardComponent } from '@pk-components/common/card/card.component';
 import { ChipComponent } from './components/common/chip/chip.component';
@@ -34,7 +35,8 @@ export function themeFactory(themeService: ThemeService) {
     FooterComponent,
     ToggleSwtichComponent,
     CardComponent,
-    ChipComponent
+    ChipComponent,
+    GlobalStatsCardsComponent
   ],
   imports: [
     BrowserModule,
