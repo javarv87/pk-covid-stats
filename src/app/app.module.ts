@@ -19,6 +19,10 @@ import { CardComponent } from '@pk-components/card/card.component';
 import { ChipComponent } from './components/chip/chip.component';
 
 import { ThemeService } from '@pk-services/theme/theme.service';
+import { MapComponent } from './components/map/map.component';
+
+//HTML
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 export function themeFactory(themeService: ThemeService) {
   return () => themeService.setInitialTheme();
@@ -34,11 +38,13 @@ export function themeFactory(themeService: ThemeService) {
     FooterComponent,
     ToggleSwtichComponent,
     CardComponent,
-    ChipComponent
+    ChipComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [{
     provide: APP_INITIALIZER,
