@@ -1,0 +1,61 @@
+.card
+  box-shadow:  10px 10px 25px var(--dark-shadow), -10px -10px 25px var(--bright-shadow)
+  border-radius: 15px
+  padding: 1.2em
+  background: var(--bg-color)
+  margin-bottom: 1em
+  &__inner
+    box-shadow: inset 3px 3px 20px var(--dark-shadow), inset -3px -3px 20px var(--bright-shadow)
+  &-title
+    margin: 0 0 1em 0
+  &-content
+    margin: 0
+  &--border
+    position: relative
+    &::before
+      position: absolute
+      content: ''
+      width: calc(100% - 2.2em)
+      height: 2px
+      left: 0
+      right: 0
+      margin: 0 auto
+      bottom: 1.2em
+      background: red
+    &.infections
+      &::before
+        background: $color-blue
+    &.deaths
+      &::before
+        background: $color-red
+    &.recoveries
+      &::before
+        background: $color-green
+    &.critical
+      &::before
+        background: $color-yellow
+  &-body
+    margin-bottom: 1.2em
+
+.card-subtitle
+  color: $color-gray-dark
+  margin-left: 25px
+  font-family: $font-raleway
+  font-size: 24px
+  font-weight: 500
+
+
+.card-text
+  color: $color-gray-dark
+  margin-left: 25px
+  font-family: $font-raleway
+  font-size: 14px
+  font-weight: 500
+.border
+  padding-bottom: 19px
+  padding-left: 25px
+  padding-right: 25px
+  width: 100%
+.line
+  height: 6px
+  border-radius: 10px

@@ -1,84 +1,46 @@
 @import 'variables'
-@import 'theme'
 
 .main-section
-  .row
-    min-height: calc(100vh - 55px)
-    margin-left: 10rem
-    margin-right: 10rem
-    .left
-      .main-content
-        .main-title
-          h1
-            margin: 0 0 2rem 0
-            font-size: 7rem
-          h2
-            font-size: 1.5rem
-            margin: 0
-        .main-description
-          font-family: $font-raleway
-          font-size: 1.3rem
-    .right
-      .container-image
+  min-height: calc(100vh - 55px)
+  margin: 0 $content-aligment
+  .left
+    .main-content
+      .main-title
+        .title
+          margin: 0
+          font-size: 7em
+        .subtitle
+          font-size: 1.5em
+          margin: 0
+      .main-description
+        font-family: $font-raleway
+        font-size: 1.3em
+  .right
+    .main-container-image
+      margin: 0 auto
+      padding: 4em
+      max-width: 30em
+      position: relative
+      .image
         margin: 0 auto
-        padding: 4rem
-        max-width: 30em
-        position: relative
-        img
-          margin: 0 auto
-          width: 100%
-        .bg-image
-          position: absolute
-          background: var(--bg-color)
-          transition: background 0.7s, box-shadow 0.5s
-          box-shadow:  15px 10px 25px var(--dark-shadow), -15px -10px 25px var(--bright-shadow)
-          border-radius: 50%
-          left: 0
-          right: 0
-          width: 100%
-          top: 0
-          bottom: 0
-          z-index: -1
+        width: 100%
+      .bg-image
+        position: absolute
+        background: var(--bg-color)
+        transition: background 0.7s, box-shadow 0.5s
+        box-shadow:  15px 10px 25px var(--dark-shadow), -15px -10px 25px var(--bright-shadow)
+        border-radius: 50%
+        left: 0
+        right: 0
+        width: 100%
+        top: 0
+        bottom: 0
+        z-index: -1
 
-.main
-  padding: 20px
-
-.main-text
-  font-size: 5em
-  font-family: $font-raleway
-  margin-top: 0px
-  margin-bottom: 0px
-
-.main-text.title
-  color: $color-orange
-  font-family: $font-raleway
-  font-weight: bold
-
-.main-text.stats
-  color: $color-gray-dark
-.text
-  color: $color-gray-dark
-  font-family: $font-lato
-  font-weight: 500
-  font-size: 18px
-.sub-text
-  color: $color-gray-dark
-  font-family: $font-lato
-  font-weight: bold
-  font-size: 18px
-
-.main p
-  color: $color-gray-dark
-
-.img-container
-  border-radius: 50%
-  background: linear-gradient(var(--bg-gradient))
-  box-shadow:  5px 5px 6px var(--shadow-main), -5px -5px 6px var(--shadow-secondary)
-  height: 400px
-  width: 400px
-  margin-right: 130px
-.img-container img
-  height: 300px
+.stats-dashboard
+  margin: 0 $content-aligment
+  .stats-title
+    font-size: 5em
 
 //JUST VISUAL HELP MEANWHILE THERE IS NO COMPONENTS
 .stats
