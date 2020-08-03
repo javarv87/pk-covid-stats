@@ -23,69 +23,7 @@
 
 <section class="stats-dashboard">
   <h1 class="stats-title text-gray text-center">Statistics</h1>
-  <div class="row mt-3">
-
-    <div class="col-xl-3 col-lg-6 col-12">
-      <div class="card card--border infections global-stats-card">
-        <h4 class="card-title text-gray text-bold">Infections</h4>
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-            <pk-chip [severity]="'infections'" value="1"></pk-chip>
-            <div class="global-stats-numbers">
-              <div class="global-stats">14,407,774</div>
-              <div class="today-stats">217,388 today</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xl-3 col-lg-6 col-12">
-      <div class="card card--border deaths global-stats-card">
-        <h4 class="card-title text-gray text-bold">Deaths</h4>
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-            <pk-chip [severity]="'deaths'" value="1"></pk-chip>
-            <div class="global-stats-numbers">
-              <div class="global-stats">14,407,774</div>
-              <div class="today-stats">217,388 today</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xl-3 col-lg-6 col-12">
-      <div class="card card--border recoveries global-stats-card">
-        <h4 class="card-title text-gray text-bold">Recoveries</h4>
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-            <pk-chip [severity]="'recoveries'" value="1"></pk-chip>
-            <div class="global-stats-numbers">
-              <div class="global-stats">14,407,774</div>
-              <div class="today-stats">217,388 today</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xl-3 col-lg-6 col-12">
-      <div class="card card--border critical global-stats-card">
-        <h4 class="card-title text-gray text-bold">Critical</h4>
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-            <pk-chip [severity]="'critical'" value="1"></pk-chip>
-            <div class="global-stats-numbers">
-              <div class="global-stats">14,407,774</div>
-              <div class="today-stats">217,388 today</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  <pk-global-stats-cards></pk-global-stats-cards>
 
   <div class="row mt-3">
 

@@ -16,7 +16,6 @@ import { FooterComponent } from '@pk-components/core/footer/footer.component';
 
 // Common Components
 import { ToggleSwtichComponent } from '@pk-components/common/toggle-swtich/toggle-swtich.component';
-import { CardComponent } from '@pk-components/common/card/card.component';
 import { ChipComponent } from './components/common/chip/chip.component';
 
 import { ThemeService } from '@pk-services/theme/theme.service';
@@ -34,7 +33,6 @@ export function themeFactory(themeService: ThemeService) {
     HeaderComponent,
     FooterComponent,
     ToggleSwtichComponent,
-    CardComponent,
     ChipComponent,
     GlobalStatsCardsComponent
   ],

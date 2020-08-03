@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'pk-global-stats-cards',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./global-stats-cards.component.sass']
 })
 export class GlobalStatsCardsComponent implements OnInit {
-
+  @HostBinding() class = 'row mt-3';
   constructor() { }
 
   ngOnInit(): void {
