@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>TR</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="21" height="15" rx="2"></rect>
+        <rect id="path-3" x="0.5" y="0.5" width="20" height="14" rx="1"></rect>
+    </defs>
+    <g id=":)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags-by-@lucchaissac" transform="translate(-143.000000, -255.000000)">
+            <g id="TR" transform="translate(143.000000, 255.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="background" fill="#E82E2E" xlink:href="#path-1"></use>
+                <path d="M8.5,3 C9.94322709,3 11.2277692,3.67941107 12.0512357,4.73584248 C11.4155874,4.27471789 10.6171672,4 9.75,4 C7.67893219,4 6,5.56700338 6,7.5 C6,9.43299662 7.67893219,11 9.75,11 C10.6171672,11 11.4155874,10.7252821 12.0508034,10.2640064 C11.2277692,11.3205889 9.94322709,12 8.5,12 C6.01471863,12 4,9.98528137 4,7.5 C4,5.01471863 6.01471863,3 8.5,3 Z" id="circle" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                <path d="" id="star" stroke="#E6B6B7" mask="url(#mask-2)"></path>
+                <rect id="star" fill="#FFFFFF" mask="url(#mask-2)" x="13" y="7" width="1" height="1"></rect>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="overlay" stroke-opacity="0.156646286" stroke="#2F343A" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

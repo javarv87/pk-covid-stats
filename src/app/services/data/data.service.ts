@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, map } from 'rxjs/operators';
-import { Country } from '../models/country.model';
+import { Country } from '../../models/country.model';
 import { throwError, Observable } from 'rxjs';
-import { Timeline } from '../models/timeline.model';
+import { Timeline, TimelineEvent } from '../../models/timeline.model';
 
 @Injectable({
   providedIn: 'root'
@@ -48,19 +48,22 @@ export class DataService {
     );
   }
   
-  getGlobalTimeline(): Observable<Timeline[]> {
+  getGlobalTimeline(): Observable<Timeline> {
     const requestUrl = `${this.apiUrl}/timeline/global`;
     return this.http.get(requestUrl).pipe(
       catchError(this.handleError),
       map(data => {
-        const timeline: Timeline[] = [];
+        const timeline: TimelineEvent[] = [];
         for (const dateKey in data) {
           timeline.push({
             date: dateKey,
             ...data[dateKey]
           })
-        }
-        return timeline;
+        };
+        return {
+          country: 'global',
+          timeline
+        };
       })
     );
   }

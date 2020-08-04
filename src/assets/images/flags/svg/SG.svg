@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>SG</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="21" height="15" rx="2"></rect>
+        <path d="M7.43759486,0.5 L3.36260955,0.5 L3.24878315,0.5 L1.49839394,0.5 C0.946996191,0.5 0.5,0.949948758 0.5,1.50684547 L0.5,13.4931545 C0.5,14.0492199 0.955305576,14.5 1.49180311,14.5 L19.5081969,14.5 C20.0559546,14.5 20.5,14.0500512 20.5,13.4931545 L20.5,1.50684547 C20.5,0.950780073 20.0545211,0.5 19.4987694,0.5 L7.43759486,0.5 Z" id="path-3"></path>
+    </defs>
+    <g id=":)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags-by-@lucchaissac" transform="translate(-205.000000, -230.000000)">
+            <g id="SG" transform="translate(205.000000, 230.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="background" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <rect id="Rectangle-366" fill="#ED3A40" mask="url(#mask-2)" x="0" y="0" width="21" height="8"></rect>
+                <path d="M4,2 C4.364732,2 4.70666076,2.0976323 5.0010775,2.26818814 C4.40216612,2.61342606 4,3.25974756 4,4 C4,4.74025244 4.40216612,5.38657394 4.99992752,5.73239368 C4.70666076,5.9023677 4.364732,6 4,6 C2.8954305,6 2,5.1045695 2,4 C2,2.8954305 2.8954305,2 4,2 Z" id="Oval-28" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                <path d="M7,5 L7,6 L6,6 L6,5 L7,5 Z M9,5 L9,6 L8,6 L8,5 L9,5 Z M10,3 L10,4 L9,4 L9,3 L10,3 Z M6,3 L6,4 L5,4 L5,3 L6,3 Z M8,2 L8,3 L7,3 L7,2 L8,2 Z" id="Rectangle-368" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="overlay" stroke-opacity="0.156646286" stroke="#2F343A" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,8 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DefaultPageComponent } from '@pk-components/pages/default-page/default-page.component';
+import { NotFoundPageComponent } from '@pk-components/pages/not-found-page/not-found-page.component';
 
+const routes: Routes = [
+ {
+    path: '',
+    redirectTo: '/default',
+    pathMatch: 'full'
+  },
+  {
+    path: 'default',
+    component: DefaultPageComponent
+  },
+  {
+    path: '**',
+    component: NotFoundPageComponent
+  }
 
-const routes: Routes = [];
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

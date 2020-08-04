@@ -14,7 +14,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@pk-components/*": [
+        "src/app/components/*"
+      ],
+      "@pk-services/*": [
+        "src/app/services/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
