@@ -5,18 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // Pages
-import { DefaultPageComponent } from '@pk-components/default-page/default-page.component';
-import { CountryPageComponent } from '@pk-components/country-page/country-page.component';
-import { NotFoundPageComponent } from '@pk-components/not-found-page/not-found-page.component';
+import { DefaultPageComponent } from '@pk-components/pages/default-page/default-page.component';
+import { CountryPageComponent } from '@pk-components/pages/country-page/country-page.component';
+import { NotFoundPageComponent } from '@pk-components/pages/not-found-page/not-found-page.component';
+
+// Core Components
+import { HeaderComponent } from '@pk-components/core/header/header.component';
+import { GlobalStatsCardsComponent } from '@pk-components/core/global-stats-cards/global-stats-cards.component';
+import { FooterComponent } from '@pk-components/core/footer/footer.component';
 
 // Common Components
-import { FooterComponent } from '@pk-components/footer/footer.component';
-import { HeaderComponent } from '@pk-components/header/header.component';
-
-// Components
-import { ToggleSwtichComponent } from '@pk-components/toggle-swtich/toggle-swtich.component';
-import { CardComponent } from '@pk-components/card/card.component';
-import { ChipComponent } from './components/chip/chip.component';
+import { ToggleSwtichComponent } from '@pk-components/common/toggle-swtich/toggle-swtich.component';
+import { ChipComponent } from './components/common/chip/chip.component';
 
 import { ThemeService } from '@pk-services/theme/theme.service';
 import { MapComponent } from './components/map/map.component';
@@ -37,9 +37,8 @@ export function themeFactory(themeService: ThemeService) {
     HeaderComponent,
     FooterComponent,
     ToggleSwtichComponent,
-    CardComponent,
     ChipComponent,
-    MapComponent
+    GlobalStatsCardsComponent
   ],
   imports: [
     BrowserModule,

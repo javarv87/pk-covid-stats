@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DefaultPageComponent } from '@pk-components/default-page/default-page.component';
-import { NotFoundPageComponent } from '@pk-components/not-found-page/not-found-page.component';
+import { DefaultPageComponent } from '@pk-components/pages/default-page/default-page.component';
+import { NotFoundPageComponent } from '@pk-components/pages/not-found-page/not-found-page.component';
 
 const routes: Routes = [
  {
