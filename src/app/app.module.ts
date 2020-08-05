@@ -38,7 +38,8 @@ export function themeFactory(themeService: ThemeService) {
     FooterComponent,
     ToggleSwtichComponent,
     ChipComponent,
-    GlobalStatsCardsComponent
+    GlobalStatsCardsComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
