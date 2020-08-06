@@ -92,7 +92,7 @@ export class MapComponent implements OnInit {
     })
 
 
-    //Aqui hay dos excepciones, pero no supe arreglarlas porque esto es parte del codigo pegado directamente de AMCHARTS
+    //Aqui hay dos excepciones, pero no supe arreglarlas porque esto es parte del codigo pegado directamente de AMCHARTS, lo que hago es comentarlas, dejar que cargue la pagina, descomentarlas, y ya funciona con las expeciones, esto es provisional mientras encuentro como arreglar la excepcion
     imageTemplate.adapter.add("latitude", function(latitude, target) {
       let polygon = polygonSeries.getPolygonById(target.dataItem.dataContext.id);
       if(polygon){
