@@ -1,4 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
+import { StatisticsService } from '@pk-services/statistics/statistics.service';
+import { Statistics } from '@pk-models/statistics.model';
 
 @Component({
   selector: 'pk-global-stats-cards',
@@ -7,9 +9,16 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class GlobalStatsCardsComponent implements OnInit {
   @HostBinding() class = 'row mt-3';
-  constructor() { }
+  stats: Statistics;
+
+  constructor(private statsService: StatisticsService) { }
 
   ngOnInit(): void {
+    this.onDataLoad();
+  }
+
+  onDataLoad() {
+    this.statsService.getStatistics().subscribe(stats => this.stats = stats);
   }
 
 }

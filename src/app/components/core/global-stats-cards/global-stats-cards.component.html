@@ -3,10 +3,10 @@
     <h4 class="card-title text-gray text-bold">Infections</h4>
     <div class="card-body">
       <div class="d-flex justify-content-between align-items-center">
-        <pk-chip [severity]="'infections'" value="1"></pk-chip>
+        <pk-chip [severity]="'infections'"></pk-chip>
         <div class="global-stats-numbers">
-          <div class="global-stats">14,407,774</div>
-          <div class="today-stats">217,388 today</div>
+          <div class="global-stats">{{ stats?.cases | number }}</div>
+          <div class="today-stats">{{ stats?.todayCases | number }} today</div>
         </div>
       </div>
     </div>
@@ -18,10 +18,10 @@
     <h4 class="card-title text-gray text-bold">Deaths</h4>
     <div class="card-body">
       <div class="d-flex justify-content-between align-items-center">
-        <pk-chip [severity]="'deaths'" value="1"></pk-chip>
+        <pk-chip [severity]="'deaths'" [value]="stats?.deathRate"></pk-chip>
         <div class="global-stats-numbers">
-          <div class="global-stats">14,407,774</div>
-          <div class="today-stats">217,388 today</div>
+          <div class="global-stats">{{ stats?.deaths | number }}</div>
+          <div class="today-stats">{{ stats?.todayDeaths }} today</div>
         </div>
       </div>
     </div>
@@ -33,10 +33,10 @@
     <h4 class="card-title text-gray text-bold">Recoveries</h4>
     <div class="card-body">
       <div class="d-flex justify-content-between align-items-center">
-        <pk-chip [severity]="'recoveries'" value="1"></pk-chip>
+        <pk-chip [severity]="'recoveries'" [value]="stats?.recoveryRate"></pk-chip>
         <div class="global-stats-numbers">
-          <div class="global-stats">14,407,774</div>
-          <div class="today-stats">217,388 today</div>
+          <div class="global-stats">{{ stats?.recovered | number }}</div>
+          <div class="today-stats">{{ stats?.activeCases | number }} active</div>
         </div>
       </div>
     </div>
@@ -48,10 +48,10 @@
     <h4 class="card-title text-gray text-bold">Critical</h4>
     <div class="card-body">
       <div class="d-flex justify-content-between align-items-center">
-        <pk-chip [severity]="'critical'" value="1"></pk-chip>
+        <pk-chip [severity]="'critical'" [value]="stats?.criticalRate"></pk-chip>
         <div class="global-stats-numbers">
-          <div class="global-stats">14,407,774</div>
-          <div class="today-stats">217,388 today</div>
+          <div class="global-stats">{{ stats?.critical | number }}</div>
+          <div class="today-stats">{{ stats?.criticalPerMillion | number }} per million</div>
         </div>
       </div>
     </div>
