@@ -50,15 +50,15 @@
           <div class="header-title d-flex justify-content-between align-items-end">
             <h4 class="card-title text-gray text-bold">Worldwide Infections</h4>
             <div class="action-bar">
-              <button class="btn btn-primary" type="button">Infections</button>
-              <button class="btn btn-primary" type="button">Deaths</button>
-              <button class="btn btn-primary" type="button">Recoveries</button>
-              <button class="btn btn-primary" type="button">Critical</button>
+              <button class="btn btn-primary" type="button" (click)="infectionClick()">Infections</button>
+              <button class="btn btn-primary" type="button" (click)="deathClick()">Deaths</button>
+              <button class="btn btn-primary" type="button" (click)="recoveriesClick()">Recoveries</button>
+              <button class="btn btn-primary" type="button" (click)="criticalClick()">Critical</button>
             </div>
           </div>
         </div>
         <div class="card-body">
-          <pk-map></pk-map>
+          <pk-map [display]="display"></pk-map>
         </div>
       </div>
     </div>

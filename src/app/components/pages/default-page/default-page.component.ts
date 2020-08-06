@@ -9,7 +9,27 @@ export class DefaultPageComponent implements OnInit {
 
   constructor() { }
 
+  display:string;
+
   ngOnInit(): void {
+    this.display="cases";
   }
+
+  infectionClick(){
+    this.display="cases";
+  }
+
+  deathClick(){
+    this.display="deaths";
+  }
+
+  recoveriesClick(){
+    this.display="recovered";
+  }
+
+  criticalClick(){
+    this.display="critical";
+  }
+
 
 }
