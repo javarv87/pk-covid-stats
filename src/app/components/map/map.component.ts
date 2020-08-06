@@ -6,7 +6,7 @@ import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import { Country } from 'src/app/models/country';
 import { MainService } from 'src/app/services/main/main.service';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { MapService } from '@pk-services/map/map.service';
 import { MapData } from 'src/app/models/map-data';
 
@@ -20,8 +20,10 @@ am4core.useTheme(am4themes_animated);
 export class MapComponent implements OnInit {
 
   private chart: am4maps.MapChart;
+  private eventsSubscription: Subscription;
 
   @Input() display:string;
+  @Input() events: Observable<void>;
 
   mapData: MapData[];
 
@@ -29,14 +31,23 @@ export class MapComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.mapService.getMapData(this.display).subscribe((res:MapData[]) => {
-      this.mapData = res;
+    this.getMapInfo();
+
+    this.eventsSubscription = this.events.subscribe(() => {
+      this.getMapInfo();
+      this.loadMap();
     });
   }
 
-
+  //Se carga el mapa por primera vez con "cases por default";
   ngAfterViewInit() {
     this.loadMap();
+  }
+
+  getMapInfo(){
+    this.mapService.getMapData(this.display).subscribe((res:MapData[]) => {
+      this.mapData = res;
+    });
   }
 
   loadMap(){
@@ -100,16 +111,17 @@ export class MapComponent implements OnInit {
 
     this.chart = chart;
   });
-}, 2000);
+}, 500);
 }
 
 
-ngOnDestroy() {
-  this.zone.runOutsideAngular(() => {
-    if (this.chart) {
-      this.chart.dispose();
-    }
-  });
-}
+  ngOnDestroy() {
+    this.eventsSubscription.unsubscribe();
+    this.zone.runOutsideAngular(() => {
+      if (this.chart) {
+        this.chart.dispose();
+      }
+    });
+  }
 
 }

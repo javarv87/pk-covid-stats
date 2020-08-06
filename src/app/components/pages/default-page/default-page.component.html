@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="card-body">
-          <pk-map [display]="display"></pk-map>
+          <pk-map [display]="display" [events]="eventsSubject.asObservable()"></pk-map>
         </div>
       </div>
     </div>

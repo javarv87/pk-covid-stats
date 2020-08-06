@@ -11,6 +11,7 @@ import { MainService } from 'src/app/services/main/main.service';
 })
 export class MapService {
 
+  //valores por default, son necesarios nada mas por el ID
   defaultMapData:MapData[] = [
     { "id":"AF", "name":"Afghanistan", "value":0, "color":"#00ff00" },
     { "id":"AL", "name":"Albania", "value":3215988, "color":"#00ff00" },
@@ -187,11 +188,11 @@ export class MapService {
 
   constructor(private http: HttpClient) { }
 
+  //regresa ya los valores transformados, segun el input de los botones
   getMapData(display:string):Observable<MapData[]>{
     return this.http.get<any[]>("http://api.coronastatistics.live/countries").pipe(
        map((elements) =>
       {
-        //console.log(elements);
         elements = elements.map((element) => { return {
            'id' : this.getId(element.country)[0] ? this.getId(element.country)[0].id : null,
            'name' : element.country,
@@ -199,18 +200,14 @@ export class MapService {
            'color': (display==="cases"?'#006BF2':(display==="deaths"?"#FF4D70":(display==="recovered"?"#2BA44B":"#EB955D")))
          }
        }).filter(element => element.id);
-        //console.log(elements);
         return elements;
      })
     );
   }
 
+  //asigna los ids segun los datos por defecto
   getId(country:string){
     return this.defaultMapData.filter( mapData => mapData.name === country );
-  }
-
-  getAllCountriesStats():Observable<Country[]>{
-    return this.http.get<Country[]>("http://api.coronastatistics.live/countries");
   }
 
 
