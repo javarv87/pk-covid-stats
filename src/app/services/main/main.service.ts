@@ -30,7 +30,6 @@ export class MainService {
     return this.http.get<TimelineData[]>("http://api.coronastatistics.live/timeline")
   }
 
-
   //Returns data for the amcharts but specific to a country
   getTimelineDataByCountry(country:string):Observable<TimelineData>{
     return this.http.get<TimelineData>(`http://api.coronastatistics.live/timeline/${country}`);
@@ -40,9 +39,4 @@ export class MainService {
   getGlobalTimelineData():Observable<GlobalTimelineData>{
     return this.http.get<GlobalTimelineData>('http://api.coronastatistics.live/timeline/global');
   }
-
-
-
-
-
 }
