@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { FooterComponent } from '@pk-components/core/footer/footer.component';
 import { ToggleSwtichComponent } from '@pk-components/common/toggle-swtich/toggle-swtich.component';
 import { ChipComponent } from './components/common/chip/chip.component';
 
+import { MainService } from '@pk-services/main/main.service';
 import { ThemeService } from '@pk-services/theme/theme.service';
 
 export function themeFactory(themeService: ThemeService) {
@@ -38,7 +40,8 @@ export function themeFactory(themeService: ThemeService) {
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [{
     provide: APP_INITIALIZER,

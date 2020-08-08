@@ -13,7 +13,8 @@ import * as am4charts from '@amcharts/amcharts4/charts';
 export class DefaultPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private payChart: am4charts.PieChart;
-  sub: Subscription;
+  sub: Subscription[] = [];
+  tempArray: any[] = [];
 
   constructor(
   	private zone: NgZone,
@@ -30,15 +31,15 @@ export class DefaultPageComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   loadInfectedPayChart() {
-    let tempArr;
-    this.sub = this.mainService.getAllCountriesStats().subscribe(data => tempArr);
+    this.sub.push(this.mainService.getAllCountriesStats().subscribe(data => this.tempArray = data));
+    console.log(this.tempArray);
     let auxPayChart = am4core.create("payChart", am4charts.PieChart);
-    let others = tempArr.slice(10,tempArr.length)
+    let others = this.tempArray.slice(10, this.tempArray.length);
 
-    this.sortem(tempArr, "cases");
-    tempArr = tempArr.reverse();
+    this.sortem(this.tempArray, "cases");
+    this.tempArray = this.tempArray.reverse();
 
-    auxPayChart.data = tempArr.slice(0,10);
+    auxPayChart.data = this.tempArray.slice(0,10);
     auxPayChart.data.push({
       country: 'Other',
       cases: this.addCases("cases",others)
@@ -112,6 +113,7 @@ export class DefaultPageComponent implements OnInit, AfterViewInit, OnDestroy {
         this.payChart.dispose();
       }
     });
+    this.sub.forEach(s => s.unsubscribe());
   }
 
 }
