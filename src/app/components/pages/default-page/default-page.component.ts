@@ -31,61 +31,36 @@ export class DefaultPageComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   loadInfectedPayChart() {
-    this.sub.push(this.mainService.getAllCountriesStats().subscribe(data => this.tempArray = data));
-    console.log(this.tempArray);
-    let auxPayChart = am4core.create("payChart", am4charts.PieChart);
-    let others = this.tempArray.slice(10, this.tempArray.length);
+    this.sub.push(this.mainService.getAllCountriesStats().subscribe(data => {
+      this.tempArray = data;
+      console.log(this.tempArray);
+      let auxPayChart = am4core.create("payChart", am4charts.PieChart);
+      let others = this.tempArray.slice(10, this.tempArray.length);
 
-    this.sortem(this.tempArray, "cases");
-    this.tempArray = this.tempArray.reverse();
+      this.sortem(this.tempArray, "cases");
+      this.tempArray = this.tempArray.reverse();
 
-    auxPayChart.data = this.tempArray.slice(0,10);
-    auxPayChart.data.push({
-      country: 'Other',
-      cases: this.addCases("cases",others)
-    });
+      auxPayChart.data = this.tempArray.slice(0,10);
+      auxPayChart.data.push({
+        country: 'Other',
+        cases: this.addCases("cases",others)
+      });
 
-    /*auxPayChart.data = [{
-      "country": "Lithuania",
-      "cases": 501.9
-    }, {
-      "country": "Czech Republic",
-      "cases": 301.9
-    }, {
-      "country": "Ireland",
-      "cases": 201.1
-    }, {
-      "country": "Germany",
-      "cases": 165.8
-    }, {
-      "country": "Australia",
-      "cases": 139.9
-    }, {
-      "country": "Austria",
-      "cases": 128.3
-    }, {
-      "country": "UK",
-      "cases": 99
-    }, {
-      "country": "Belgium",
-      "cases": 60
-    }, {
-      "country": "The Netherlands",
-      "cases": 50
-    }];*/
+      let paySeries = auxPayChart.series.push(new am4charts.PieSeries());
+      paySeries.dataFields.value = "cases";
+      paySeries.dataFields.category = "country";
 
-    let paySeries = auxPayChart.series.push(new am4charts.PieSeries());
-    paySeries.dataFields.value = "cases";
-    paySeries.dataFields.category = "country";
-
-    this.payChart = auxPayChart;
+      this.payChart = auxPayChart;
+    }));
   }
 
   addCases(category, paramArr) {
     let result = 0;
     for (var i = 0 ; i<paramArr.length ; i+=1) {
+      console.log(result);
       result += paramArr[i][category];
     }
+    console.log(result);
     return result;
   }
 
