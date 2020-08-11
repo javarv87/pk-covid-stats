@@ -1,26 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>PK</title>
-    <defs>
-        <rect id="path-1" x="0" y="0" width="21" height="15" rx="2"></rect>
-        <rect id="path-3" x="0.5" y="0.5" width="20" height="14" rx="1"></rect>
-    </defs>
-    <g id=":)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Flags-by-@lucchaissac" transform="translate(-205.000000, -205.000000)">
-            <g id="PK" transform="translate(205.000000, 205.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <use id="background" fill="#FFFFFF" xlink:href="#path-1"></use>
-                <rect id="left" fill="#32733C" mask="url(#mask-2)" x="6" y="0" width="15" height="15"></rect>
-                <path d="M11,6 C11,8.209139 12.6789322,10 14.75,10 C16.1137612,10 17.3074928,9.22348494 17.9637927,8.06235063 C17.6881779,10.2824832 15.7946627,12 13.5,12 C11.0147186,12 9,9.98528137 9,7.5 C9,5.52868158 10.2675842,3.85342332 12.0321425,3.24483548 C11.3922659,3.96209303 11,4.93218326 11,6 Z" id="circle" fill="#EFF1F0" mask="url(#mask-2)"></path>
-                <path d="" id="star" stroke="#A7BCAB" mask="url(#mask-2)"></path>
-                <rect id="star" fill="#FFFFFF" mask="url(#mask-2)" x="16" y="4" width="1" height="1"></rect>
-                <mask id="mask-4" fill="white">
-                    <use xlink:href="#path-3"></use>
-                </mask>
-                <use id="overlay" stroke-opacity="0.156646286" stroke="#2F343A" xlink:href="#path-3"></use>
-            </g>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-75 -40 120 80">
+<title>Flag of Pakistan</title>
+<rect x="-75" y="-40" width="120" height="80" fill="#fff"/>
+<rect x="-45" y="-40" width="90" height="80" fill="#01411C"/>
+<circle r="24" fill="#fff"/>
+<circle r="22" cx="-7" cy="-40" fill="#01411C" transform="rotate(-41.63354, 45, -40)"/>
+<polygon points="0,-513674 301930,415571 -488533,-158734 488533,-158734 -301930,415571" fill="#fff" transform="rotate(-41.63354) translate(16) rotate(18) scale(0.00001557408)"/>
 </svg>
