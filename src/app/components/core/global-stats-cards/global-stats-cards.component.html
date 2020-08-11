@@ -1,57 +1,12 @@
-<div class="col-xl-3 col-lg-6 col-12">
-  <div class="card card--border infections global-stats-card">
-    <h4 class="card-title text-gray text-bold">Infections</h4>
+<div class="col-xl-3 col-lg-6 col-12" *ngFor="let card of stats">
+  <div class="card card--border global-stats-card" [ngClass]="card.class">
+    <h4 class="card-title text-gray text-bold">{{card.title}}</h4>
     <div class="card-body">
       <div class="d-flex justify-content-between align-items-center">
-        <pk-chip [severity]="'infections'"></pk-chip>
+        <pk-chip [severity]="card.class" [value]="card.rate"></pk-chip>
         <div class="global-stats-numbers">
-          <div class="global-stats">{{ stats?.cases | number }}</div>
-          <div class="today-stats">{{ stats?.todayCases | number }} today</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="col-xl-3 col-lg-6 col-12">
-  <div class="card card--border deaths global-stats-card">
-    <h4 class="card-title text-gray text-bold">Deaths</h4>
-    <div class="card-body">
-      <div class="d-flex justify-content-between align-items-center">
-        <pk-chip [severity]="'deaths'" [value]="stats?.deathRate"></pk-chip>
-        <div class="global-stats-numbers">
-          <div class="global-stats">{{ stats?.deaths | number }}</div>
-          <div class="today-stats">{{ stats?.todayDeaths }} today</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="col-xl-3 col-lg-6 col-12">
-  <div class="card card--border recoveries global-stats-card">
-    <h4 class="card-title text-gray text-bold">Recoveries</h4>
-    <div class="card-body">
-      <div class="d-flex justify-content-between align-items-center">
-        <pk-chip [severity]="'recoveries'" [value]="stats?.recoveryRate"></pk-chip>
-        <div class="global-stats-numbers">
-          <div class="global-stats">{{ stats?.recovered | number }}</div>
-          <div class="today-stats">{{ stats?.activeCases | number }} active</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="col-xl-3 col-lg-6 col-12">
-  <div class="card card--border critical global-stats-card">
-    <h4 class="card-title text-gray text-bold">Critical</h4>
-    <div class="card-body">
-      <div class="d-flex justify-content-between align-items-center">
-        <pk-chip [severity]="'critical'" [value]="stats?.criticalRate"></pk-chip>
-        <div class="global-stats-numbers">
-          <div class="global-stats">{{ stats?.critical | number }}</div>
-          <div class="today-stats">{{ stats?.criticalPerMillion | number }} per million</div>
+          <div class="global-stats">{{ card.totalCases | number }}</div>
+          <div class="today-stats">{{ card.todayCases | number }} {{card.textPostfix}}</div>
         </div>
       </div>
     </div>
