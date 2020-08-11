@@ -43,12 +43,8 @@ export function themeFactory(themeService: ThemeService) {
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     HttpClientModule,
     FormsModule
-=======
-    HttpClientModule
->>>>>>> develop
   ],
   providers: [{
     provide: APP_INITIALIZER,
