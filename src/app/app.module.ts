@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,8 +21,8 @@ import { ToggleSwtichComponent } from '@pk-components/common/toggle-swtich/toggl
 import { ChipComponent } from './components/common/chip/chip.component';
 
 import { ThemeService } from '@pk-services/theme/theme.service';
-import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './pipes/filter.pipe';
+
 export function themeFactory(themeService: ThemeService) {
   return () => themeService.setInitialTheme();
 }
@@ -42,8 +43,12 @@ export function themeFactory(themeService: ThemeService) {
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     HttpClientModule,
     FormsModule
+=======
+    HttpClientModule
+>>>>>>> develop
   ],
   providers: [{
     provide: APP_INITIALIZER,

@@ -21,6 +21,9 @@
       ],
       "@pk-services/*": [
         "src/app/services/*"
+      ],
+      "@pk-models/*": [
+        "src/app/models/*"
       ]
     }
   },
