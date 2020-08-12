@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from '@pk-services/main/main.service';
-import Fuse from 'fuse.js'
 
 @Component({
   selector: 'pk-default-page',
