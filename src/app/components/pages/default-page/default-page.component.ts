@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MainService } from '@pk-services/main/main.service';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
-import Fuse from 'fuse.js'
 
 @Component({
   selector: 'pk-default-page',
@@ -261,7 +260,7 @@ export class DefaultPageComponent implements OnInit {
     'Zimbabwe': 'ZW',
     'Curaçao': 'CW'
   };
-  fuse: any;
+
   countries:any=[];
   sortType = "todayCases";
   filterPost = '';
