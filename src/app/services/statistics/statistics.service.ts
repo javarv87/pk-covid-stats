@@ -114,7 +114,7 @@ export class StatisticsService {
               class: 'critical',
               rate: country.critical / activeCases,
               totalCases: country.critical,
-              todayCases: country.criticalPerMillion,
+              todayCases: country.criticalPerOneMillion,
               textPostfix: 'Per million'
             }
           ];
