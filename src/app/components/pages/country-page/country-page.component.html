@@ -1,4 +1,32 @@
 <section class="stats-dashboard">
-  <h2 class="text-gray text-bold title text-center">{{ countryName }}'s Statistics</h2>
+  <h2 class="text-gray text-bold title text-center"> {{ countryName }}'s Statistics</h2>
   <pk-stats-cards [country]="countryName"></pk-stats-cards>
+  <div class="row mt-3">
+    <div class="col-xl-4 col-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="header-title d-flex justify-content-between align-items-end">
+            <h4 class="card-title text-gray text-bold">Rates Distribution</h4>
+          </div>
+        </div>
+        <div class="card-body" style="min-height: 250px; max-height: 400px; padding: 0%;">
+          <div id="radarChart" style="width: 100%; height: 400px"></div>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-xl-4 col-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="header-title d-flex justify-content-between align-items-end">
+            <h4 class="card-title text-gray text-bold">{{countryName}}'s Distribution of infections by country</h4>
+          </div>
+        </div>
+        <div class="card-body" style="min-height: 250px; max-height: 400px; padding: 0%;">
+          <div id="pieChart" style="width: 100%; height: 300px"></div>
+        </div>  
+      </div>
+    </div>
+  </div>
 </section>
