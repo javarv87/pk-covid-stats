@@ -1,36 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>IR</title>
-    <defs>
-        <rect id="path-1" x="0" y="0" width="21" height="15" rx="2"></rect>
-        <filter x="-2.4%" y="-3.3%" width="104.8%" height="106.7%" filterUnits="objectBoundingBox" id="filter-3">
-            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
-            <feOffset dx="0" dy="0" in="shadowSpreadInner1" result="shadowOffsetInner1"></feOffset>
-            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.121659873 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
-        </filter>
-        <rect id="path-4" x="0.5" y="0.5" width="20" height="14" rx="1"></rect>
-    </defs>
-    <g id=":)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Flags-by-@lucchaissac" transform="translate(-112.000000, -130.000000)">
-            <g id="IR" transform="translate(112.000000, 130.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <g id="background">
-                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
-                </g>
-                <rect id="bottom" fill="#DD313B" mask="url(#mask-2)" x="0" y="10" width="21" height="5"></rect>
-                <circle id="circle" stroke="#DD313B" mask="url(#mask-2)" cx="10.5" cy="7.5" r="1"></circle>
-                <rect id="top" fill="#4DAD62" mask="url(#mask-2)" x="0" y="0" width="21" height="5"></rect>
-                <path d="M1,3 L1,4 L2,4 L2,3 L1,3 L1,3 Z M3,3 L3,4 L4,4 L4,3 L3,3 L3,3 Z M5,3 L5,4 L6,4 L6,3 L5,3 L5,3 Z M7,3 L7,4 L8,4 L8,3 L7,3 L7,3 Z M9,3 L9,4 L10,4 L10,3 L9,3 L9,3 Z M11,3 L11,4 L12,4 L12,3 L11,3 L11,3 Z M13,3 L13,4 L14,4 L14,3 L13,3 L13,3 Z M15,3 L15,4 L16,4 L16,3 L15,3 L15,3 Z M17,3 L17,4 L18,4 L18,3 L17,3 L17,3 Z M19,3 L19,4 L20,4 L20,3 L19,3 L19,3 Z" id="circles" fill="#C9E6D0" mask="url(#mask-2)"></path>
-                <path d="M1,11 L1,12 L2,12 L2,11 L1,11 L1,11 Z M3,11 L3,12 L4,12 L4,11 L3,11 L3,11 Z M5,11 L5,12 L6,12 L6,11 L5,11 L5,11 Z M7,11 L7,12 L8,12 L8,11 L7,11 L7,11 Z M9,11 L9,12 L10,12 L10,11 L9,11 L9,11 Z M11,11 L11,12 L12,12 L12,11 L11,11 L11,11 Z M13,11 L13,12 L14,12 L14,11 L13,11 L13,11 Z M15,11 L15,12 L16,12 L16,11 L15,11 L15,11 Z M17,11 L17,12 L18,12 L18,11 L17,11 L17,11 Z M19,11 L19,12 L20,12 L20,11 L19,11 L19,11 Z" id="circles" fill="#F3B2B6" mask="url(#mask-2)"></path>
-                <mask id="mask-5" fill="white">
-                    <use xlink:href="#path-4"></use>
-                </mask>
-                <use id="overlay" stroke-opacity="0.156646286" stroke="#2F343A" xlink:href="#path-4"></use>
-            </g>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 630 360">
+<rect width="630" height="360" fill="#da0000"/>
+<rect width="630" height="240" fill="#fff"/>
+<rect width="630" height="120" fill="#239f40"/>
+<g transform="translate(8.4,100.4)">
+<g id="tb4">
+<g id="tb1" fill="none" stroke="#fff" stroke-width="2">
+<path id="tbp1" d="M0,1H26M1,10V5H9V9H17V5H12M4,9H6M26,9H21V5H29M29,0V9H37V0M33,0V9" transform="scale(1.4)"/>
+<path id="tbp2" d="M0,7H9M10,7H19" transform="scale(2.8)"/>
+<use xlink:href="#tbp2" y="120"/>
+<use xlink:href="#tbp1" y="145.2"/>
+</g>
+<g id="tb3">
+<use xlink:href="#tb1" x="56"/>
+<use xlink:href="#tb1" x="112"/>
+<use xlink:href="#tb1" x="168"/>
+</g>
+</g>
+<use xlink:href="#tb3" x="168"/>
+<use xlink:href="#tb4" x="392"/>
+</g>
+<g fill="#da0000" transform="matrix(45,0,0,45,315,180)">
+<g id="emblem_half">
+<path d="M-0.54815,0.83638A0.912046,0.912046 0 0,0 0.328544,-0.722384A1,1 0 0,1 -0.54815,0.83638"/>
+<path d="M0.618339,0.661409A0.763932,0.763932 0 0,0 0.421644,-0.741049A1,1 0 0,1 0.618339,0.661409"/>
+<path d="M0,1 -0.05,0 0,-0.787278A0.309995,0.309995 0 0,0 0.118034,-0.688191V-0.100406L0.077809,0.892905z"/>
+<path d="M-0.02,-0.85 0,-0.831217A0.14431,0.14431 0 0,0 0.252075,-0.967708A0.136408,0.136408 0 0,1 0,-0.924634"/>
+</g>
+<use xlink:href="#emblem_half" transform="scale(-1,1)"/>
+</g>
 </svg>

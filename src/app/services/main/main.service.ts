@@ -39,4 +39,10 @@ export class MainService {
   getGlobalTimelineData():Observable<GlobalTimelineData>{
     return this.http.get<GlobalTimelineData>('http://api.coronastatistics.live/timeline/global');
   }
+
+  //Get data from Affected Nations
+  getAll(type):Observable<Country>{
+    return this.http.get<Country>(`http://api.coronastatistics.live/countries?sort=${type}`);
+  }
+
 }

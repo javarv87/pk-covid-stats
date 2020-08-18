@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +22,8 @@ import { ChipComponent } from './components/common/chip/chip.component';
 
 import { MainService } from '@pk-services/main/main.service';
 import { ThemeService } from '@pk-services/theme/theme.service';
+import { FilterPipe } from './pipes/filter.pipe';
+import { StatsCardsComponent } from './components/core/stats-cards/stats-cards.component';
 
 export function themeFactory(themeService: ThemeService) {
   return () => themeService.setInitialTheme();
@@ -36,12 +39,15 @@ export function themeFactory(themeService: ThemeService) {
     FooterComponent,
     ToggleSwtichComponent,
     ChipComponent,
-    GlobalStatsCardsComponent
+    GlobalStatsCardsComponent,
+    FilterPipe,
+    StatsCardsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [{
     provide: APP_INITIALIZER,
