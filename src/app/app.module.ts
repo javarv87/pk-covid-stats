@@ -22,6 +22,7 @@ import { ChipComponent } from './components/common/chip/chip.component';
 
 import { ThemeService } from '@pk-services/theme/theme.service';
 import { FilterPipe } from './pipes/filter.pipe';
+import { StatsCardsComponent } from './components/core/stats-cards/stats-cards.component';
 
 export function themeFactory(themeService: ThemeService) {
   return () => themeService.setInitialTheme();
@@ -38,7 +39,8 @@ export function themeFactory(themeService: ThemeService) {
     ToggleSwtichComponent,
     ChipComponent,
     GlobalStatsCardsComponent,
-    FilterPipe
+    FilterPipe,
+    StatsCardsComponent
   ],
   imports: [
     BrowserModule,

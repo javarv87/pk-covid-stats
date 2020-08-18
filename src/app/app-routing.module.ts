@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultPageComponent } from '@pk-components/pages/default-page/default-page.component';
 import { NotFoundPageComponent } from '@pk-components/pages/not-found-page/not-found-page.component';
+import { CountryPageComponent } from '@pk-components/pages/country-page/country-page.component';
 
 const routes: Routes = [
  {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'default',
     component: DefaultPageComponent
+  },
+  {
+    path: 'country/:country',
+    component: CountryPageComponent
   },
   {
     path: '**',

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { Statistics } from '@pk-models/statistics.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -71,6 +70,51 @@ export class StatisticsService {
               rate: stats.critical / activeCases,
               totalCases: stats.critical,
               todayCases: stats.criticalPerMillion,
+              textPostfix: 'Per million'
+            }
+          ];
+        })
+      );
+  }
+
+  getCountryStatistics(country: string) {
+    return this.http.get<any[]>(`${this.apiUrl}/countries/${country}`)
+      .pipe(
+        map((country: any) => {
+          const total = country.deaths + country.recovered;
+          const activeCases = country.cases - (country.deaths + country.recovered);
+
+          return [
+            {
+              title: 'Infections',
+              class: 'infections',
+              rate: null,
+              totalCases: country.cases,
+              todayCases: country.todayCases,
+              textPostfix: 'Today'
+            },
+            {
+              title: 'Deaths',
+              class: 'deaths',
+              rate: country.deaths / total,
+              totalCases: country.deaths,
+              todayCases: country.todayDeaths,
+              textPostfix: 'Today'
+            },
+            {
+              title: 'Recoveries',
+              class: 'recoveries',
+              rate: country.recovered / total,
+              totalCases: country.recovered,
+              todayCases: activeCases,
+              textPostfix: 'Remaining'
+            },
+            {
+              title: 'Critical',
+              class: 'critical',
+              rate: country.critical / activeCases,
+              totalCases: country.critical,
+              todayCases: country.criticalPerOneMillion,
               textPostfix: 'Per million'
             }
           ];

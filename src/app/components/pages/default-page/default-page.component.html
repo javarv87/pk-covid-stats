@@ -49,7 +49,8 @@
           </div>
         </div>
         <div class="card-body scrolling" style="min-height: 250px; max-height: 400px;">
-          <a class="row border"*ngFor="let country of countries | filter:filterPost">
+          <a class="row border country-link" *ngFor="let country of countries | filter:filterPost"
+            [routerLink]="['/country', country.country]">
             <div class="col-8" style="padding-left: 0%;">
               <div class="d-flex">
                 <img *ngIf="countryCodes[country.country]" style="height: 30px; width: 40px;"
