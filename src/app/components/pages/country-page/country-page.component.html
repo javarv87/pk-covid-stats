@@ -1,4 +1,22 @@
 <section class="stats-dashboard">
   <h2 class="text-gray text-bold title text-center">{{ countryName }}'s Statistics</h2>
   <pk-stats-cards [stats]="stats"></pk-stats-cards>
+
+  <div class="row mt-3">
+    <div class="col-xl-4 col-12">
+      <div class="card">
+        <!-- Country Infection distribution goes here-->
+      </div>
+    </div>
+
+    <div class="col-xl-8 col-12">
+      <div class="rates-container">
+        <h4 class="card-title text-gray text-bold">Infection Rates</h4>
+        <div class="mt-4 mx-5 justify-content-center">
+          <pk-rates-cards [rates]="rates"></pk-rates-cards>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>

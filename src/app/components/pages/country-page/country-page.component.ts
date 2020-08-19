@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
 export class CountryPageComponent implements OnInit, OnDestroy {
 
   stats: any[];
+  rates: any;
   countryName: string;
   subscription: Subscription;
 
@@ -22,13 +23,19 @@ export class CountryPageComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.countryName = this.route.snapshot.params.country;
     this.subscription = this.statistics.getCountryStatistics(this.countryName)
-      .subscribe(stats => this.stats = stats);
+      .subscribe(stats => {
+        this.stats = stats
+        this.rates = {
+          deathRate: stats[1].rate,
+          recoveryRate: stats[2].rate,
+          criticalRate: stats[3].rate
+        }
+      });
   }
 
   ngOnDestroy(): void {
-    if (this.subscription) {
+    if (this.subscription)
       this.subscription.unsubscribe();
-    }
   }
   
 }
