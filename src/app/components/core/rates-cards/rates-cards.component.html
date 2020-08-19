@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-6" *ngFor="let rate of _rates">
+        <div class="card">
+            <h4 class="card-title text-gray text-bold text-center">{{ rate.title }}</h4>
+            <div class="card-body">
+                <div class="d-flex justify-content-center">
+                    <span [ngClass]="rate.class" class="rate-text text-bold">{{ rate.rate | percent : '1.2-2' }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
