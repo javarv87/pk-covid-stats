@@ -20,6 +20,7 @@ import { FooterComponent } from '@pk-components/core/footer/footer.component';
 import { ToggleSwtichComponent } from '@pk-components/common/toggle-swtich/toggle-swtich.component';
 import { ChipComponent } from './components/common/chip/chip.component';
 
+import { MainService } from '@pk-services/main/main.service';
 import { ThemeService } from '@pk-services/theme/theme.service';
 import { FilterPipe } from './pipes/filter.pipe';
 import { StatsCardsComponent } from './components/core/stats-cards/stats-cards.component';
