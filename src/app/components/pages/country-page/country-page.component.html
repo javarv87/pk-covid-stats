@@ -1,4 +1,23 @@
 <section class="stats-dashboard">
   <h2 class="text-gray text-bold title text-center">{{ countryName }}'s Statistics</h2>
   <pk-stats-cards [country]="countryName"></pk-stats-cards>
+
+  <div class="row mt-3">
+    <div class="col-xl-4 col-12">
+      <div class="card">
+        <!-- Rate distribution goes here -->
+      </div>
+    </div>
+
+    <div class="col-xl-8 col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title text-gray text-bold">Infections History</h4>
+        </div>
+        <div class="card-body" *ngIf="countryTimeline">
+          <pk-infections-history [history]="countryTimeline.data.timeline"></pk-infections-history>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

@@ -24,6 +24,7 @@ import { MainService } from '@pk-services/main/main.service';
 import { ThemeService } from '@pk-services/theme/theme.service';
 import { FilterPipe } from './pipes/filter.pipe';
 import { StatsCardsComponent } from './components/core/stats-cards/stats-cards.component';
+import { InfectionsHistoryComponent } from './components/core/infections-history/infections-history.component';
 
 export function themeFactory(themeService: ThemeService) {
   return () => themeService.setInitialTheme();
@@ -41,7 +42,8 @@ export function themeFactory(themeService: ThemeService) {
     ChipComponent,
     GlobalStatsCardsComponent,
     FilterPipe,
-    StatsCardsComponent
+    StatsCardsComponent,
+    InfectionsHistoryComponent
   ],
   imports: [
     BrowserModule,
